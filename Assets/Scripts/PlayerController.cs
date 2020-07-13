@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
         {
             playerRigidbody.velocity = playerRigidbody.velocity * 0.5f;
         }
-        animator.SetBool("grounded", isGrounded);
+        animator.SetBool("Grounded", isGrounded);
    }
 
 
@@ -45,11 +45,13 @@ public class PlayerController : MonoBehaviour {
         // 사망 처리
         animator.SetTrigger("Die");
         playerAudio.clip = deathClip;
+        playerAudio.Play();
         playerRigidbody.velocity = Vector2.zero;
         isDead = true;
+        GameManager.instance.OnPlayerDead();
    }
 
-    private void OntriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Dead" && !isDead)
         {
