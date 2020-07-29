@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackgroundLoop
     - GameManager
     - Platform
     - PlatformSpawner
@@ -29,6 +30,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
@@ -71,6 +73,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11218}
     - Class: 114
+      Script: {instanceID: 11938}
+    - Class: 114
       Script: {instanceID: 12036}
     - Class: 114
       Script: {instanceID: 12072}
@@ -78,6 +82,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12362}
     - Class: 114
       Script: {instanceID: 12718}
+    - Class: 114
+      Script: {instanceID: 13184}
     - Class: 114
       Script: {instanceID: 13254}
     - Class: 114
